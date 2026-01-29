@@ -29,9 +29,10 @@ const Team = () => {
     },
   ];
 
-
   return (
-    <section className='bg-dark py-24'>
+    <section
+      id='team'
+      className='bg-dark py-24'>
       <div className='container mx-auto px-6'>
         <div className='flex items-center justify-between mb-12'>
           <h2 className='text-4xl font-bold text-white'>Our Team</h2>

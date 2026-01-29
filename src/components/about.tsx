@@ -1,8 +1,10 @@
-import { Play } from 'lucide-react';
+import {Play} from 'lucide-react';
 
 const About = () => {
   return (
-    <section className='bg-[#121212] py-24'>
+    <section
+      id='about'
+      className='bg-[#121212] py-24'>
       <div className='container mx-auto px-6'>
         <div className='grid lg:grid-cols-2 gap-16 items-center'>
           <div>
@@ -19,7 +21,7 @@ const About = () => {
               methodology.
             </p>
             <div className='flex gap-4'>
-              <div className='text-4xl font-bold text-white'>68%</div>
+              <div className='text-4xl font-bold text-white'>86%</div>
               <div className='text-gray-500 leading-tight'>
                 Growth
                 <br />

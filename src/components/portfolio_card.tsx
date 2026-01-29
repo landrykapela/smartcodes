@@ -61,12 +61,14 @@ const PortfolioCard = ({item}: {item: any}) => {
           }}
         />
       </div>
-      {/* Overlay aligns right */}
-      <div className='absolute inset-0 flex items-center justify-end bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-        <div className='text-right mr-8 md:w-5/12 '>
-          <h3 className='text-xl font-bold'>{item.title}</h3>
+      {/* Overlay aligns right on desktop, visible by default on mobile */}
+      <div className='absolute inset-0 flex items-center justify-end bg-black/60 transition-opacity duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100'>
+        <div className='mr-0 md:mr-8 md:w-5/12 w-full px-4 text-left md:text-right'>
+          <h3 className='text-lg md:text-xl font-bold'>{item.title}</h3>
           <p className='text-sm text-gray-300'>{item.category}</p>
-          <p className='text-xs text-gray-600'>{item.description}</p>
+          <p className='text-xs text-gray-600 hidden md:block'>
+            {item.description}
+          </p>
         </div>
       </div>
     </div>

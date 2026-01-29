@@ -61,10 +61,10 @@ const TeamCard = ({item}: {item: any}) => {
           }}
         />
       </div>
-      {/* Overlay aligns bottom left */}
-      <div className='absolute inset-0 flex items-end justify-start bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-        <div className='text-left mb-8 ml-8'>
-          <h3 className='text-xl font-bold'>{item.name}</h3>
+      {/* Overlay aligns bottom left; visible on mobile, hover on md+ */}
+      <div className='absolute inset-0 flex items-end justify-start bg-black/60 transition-opacity duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100'>
+        <div className='text-left mb-6 ml-4 md:mb-8 md:ml-8 w-full md:w-auto p-4 md:p-0'>
+          <h3 className='text-lg md:text-xl font-bold'>{item.name}</h3>
           <p className='text-sm text-gray-300'>{item.position}</p>
         </div>
       </div>

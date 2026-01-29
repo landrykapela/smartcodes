@@ -8,8 +8,11 @@ const Footer = () => {
           <h2 className='text-6xl md:text-9xl font-bold text-white mb-8 tracking-tighter'>
             Get started <span className='text-[#999] opacity-50'>now</span>
           </h2>
-          <button className='bg-accent text-black px-10 py-5 rounded-full text-xl font-bold hover:scale-105 transition-transform flex items-center gap-3'>
-            Let's Contact <ArrowUpRight />
+          <button
+            type='button'
+            onClick={() => window.dispatchEvent(new CustomEvent('openContact'))}
+            className='bg-accent text-default px-10 py-5 rounded-full text-xl font-bold hover:scale-105 transition-transform flex items-center gap-3'>
+            Let's Connect <ArrowUpRight />
           </button>
         </div>
 

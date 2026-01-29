@@ -1,10 +1,9 @@
-
 import vyb from '../assets/vybe.png';
 import stanbic from '../assets/standbic.png';
 import nmb from '../assets/nmb.png';
 import precision from '../assets/precision.png';
 import PortfolioCard from './portfolio_card';
-import { desc } from 'framer-motion/client';
+import {desc} from 'framer-motion/client';
 
 const Portfolio = () => {
   const items = [
@@ -60,7 +59,9 @@ const Portfolio = () => {
   // };
 
   return (
-    <section className='bg-dark py-24'>
+    <section
+      id='portfolio'
+      className='bg-dark py-24'>
       <div className='container mx-auto px-6'>
         <div className='flex items-center justify-between mb-12'>
           <h2 className='text-4xl font-bold text-white'>Featured Work</h2>

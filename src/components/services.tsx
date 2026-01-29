@@ -9,7 +9,6 @@ import {
   ArrowRight,
 } from 'lucide-react';
 
-
 const Services = () => {
   const services = [
     {
@@ -51,7 +50,9 @@ const Services = () => {
   ];
 
   return (
-    <section className='bg-dark py-24'>
+    <section
+      id='services'
+      className='bg-dark py-24'>
       <div className='container mx-auto px-6'>
         <div className='flex flex-col md:flex-row justify-between md:items-center items-end mb-16 gap-8'>
           <div>
@@ -74,9 +75,7 @@ const Services = () => {
               className='group p-10 rounded-3xl bg-dark-variant md:flex justify-center items-center md:items-start gap-6 hover:bg-black transition-colors relative overflow-hidden'>
               <div className='absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors' />
               <div className='p-4 rounded-xl bg-dark text-white group-hover:text-accent mx-auto'>
-                {React.cloneElement(item.icon as React.ReactElement, {
-                  
-                })}
+                {React.cloneElement(item.icon as React.ReactElement, {})}
               </div>
               <div>
                 <h3 className='text-2xl font-bold text-white mb-2'>

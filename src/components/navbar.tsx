@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import {useState, useEffect} from 'react';
+import {Menu, X} from 'lucide-react';
 import logo from '../assets/sc-logo.png';
 
 const Navbar = () => {
@@ -27,10 +27,20 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className='hidden lg:flex items-center gap-8 text-white/80 font-medium'>
-          {['Home', 'About', 'Portfolio', 'Contact'].map((item) => (
+          {['Home', 'About', 'Portfolio', 'Team', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
+              onClick={(e) => {
+                e.preventDefault();
+                if (item === 'Contact') {
+                  window.dispatchEvent(new CustomEvent('openContact'));
+                  return;
+                }
+                const id = item.toLowerCase();
+                const el = document.getElementById(id);
+                if (el) el.scrollIntoView({behavior: 'smooth'});
+              }}
               className='hover:text-accent transition-colors'>
               {item}
             </a>
@@ -56,10 +66,21 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className='absolute top-full left-0 w-full bg-dark border-t border-white/10 p-6 flex flex-col gap-4 lg:hidden'>
-          {['Home', 'About', 'Portfolio', 'Contact'].map((item) => (
+          {['Home', 'About', 'Portfolio', 'Team', 'Contact'].map((item) => (
             <a
               key={item}
-              href='#'
+              href={`#${item.toLowerCase()}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+                if (item === 'Contact') {
+                  window.dispatchEvent(new CustomEvent('openContact'));
+                  return;
+                }
+                const id = item.toLowerCase();
+                const el = document.getElementById(id);
+                if (el) el.scrollIntoView({behavior: 'smooth'});
+              }}
               className='text-xl text-white font-medium hover:text-accent'>
               {item}
             </a>

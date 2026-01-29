@@ -1,8 +1,8 @@
-
-
 const Stats = () => {
   return (
-    <section className='bg-[#171717] py-20 border-y border-white/5'>
+    <section
+      id='stats'
+      className='bg-[#171717] py-20 border-y border-white/5'>
       <div className='container mx-auto px-6'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
           {[
