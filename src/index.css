@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --color-dark: #121212;
+  --color-dark-variant: #171717;
+  --color-accent: #ff0000;
+  --color-accent-variant: #9e1b1b;
+  --color-brand: #000000;
+  --color-text-default: #ffffff;
+  --width-logo: 150px;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased bg-dark text-white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+  nav{
+    font-family: 'Outfit', sans-serif;
+  }
+  .logo-header {
+    height: 3rem;
+  }
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
+  }
+  .hero-bg {
+    background-image: url('/src/assets/red_bg.png');
+    background-size: cover;
+    background-position: center;
+
+  }
+  .leo-bg{
+    background-image: url('/src/assets/leo_bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
