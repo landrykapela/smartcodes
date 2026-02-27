@@ -96,9 +96,9 @@ const Hero = () => {
           <video
             ref={videoRef}
             src={video}
-            muted
-            autoPlay
-            controls
+             muted
+             autoPlay
+            // controls
             loop></video>
         </div>
       </div>

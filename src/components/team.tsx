@@ -1,4 +1,4 @@
-import vyb from '../assets/vybe.png';
+
 import Johnson from '../assets/johnson.webp';
 import Sebo from '../assets/sebo.webp';
 import Beatrice from '../assets/beatrice.webp';

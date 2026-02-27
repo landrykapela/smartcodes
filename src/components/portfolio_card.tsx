@@ -1,4 +1,4 @@
-import {motion, useAnimation} from 'framer-motion';
+import {useAnimation} from 'framer-motion';
 import {useEffect, useRef, useState} from 'react';
 
 const PortfolioCard = ({item}: {item: any}) => {

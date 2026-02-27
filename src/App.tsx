@@ -4,7 +4,7 @@ import Services from './components/services';
 import Portfolio from './components/portfolio';
 import Footer from './components/footer';
 import About from './components/about';
-import Chatbot from './components/chatbot';
+
 import Navbar from './components/navbar';
 import Hero from './components/hero';
 import Stats from './components/stats';
@@ -36,7 +36,7 @@ export default function App() {
         <Stats />
       </main>
       <Footer />
-      <Chatbot />
+      {/* <Chatbot /> */}
       <Contact
         open={contactOpen}
         onClose={() => setContactOpen(false)}

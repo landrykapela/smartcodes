@@ -3,7 +3,7 @@ import stanbic from '../assets/standbic.png';
 import nmb from '../assets/nmb.png';
 import precision from '../assets/precision.png';
 import PortfolioCard from './portfolio_card';
-import {desc} from 'framer-motion/client';
+
 
 const Portfolio = () => {
   const items = [
