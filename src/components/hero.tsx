@@ -25,13 +25,13 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='relative pt-16 pb-16 overflow-hidden min-h-screen flex items-center bg-black'>
+      className='pb-16 overflow-hidden min-h-screen flex items-center bg-black'>
       {/* Background Shapes (Simulated) */}
       {/* <div className='absolute top-20 right-0 w-48 h-48  rotate-45 bg-accent opacity-5' /> */}
 
-      <div className='container mx-auto px-6 relative z-10 grid lg:grid-cols-3 gap-12 items-center'>
-        <div className='space-y-8 col-span-2 mt-20 md:mt-0'>
-          <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/80 text-sm backdrop-blur-sm'>
+      <div className='h-full container mx-auto px-6 z-10 grid md:grid-cols-2 gap-12 items-center'>
+        <div className='space-y-8 h-full flex flex-col justify-center'>
+          <div className='w-8/12 md:w-2/3 lg:w-1/3 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/80 text-sm backdrop-blur-sm'>
             <span className='w-2 h-2 bg-accent rounded-full animate-pulse' />
             Marketing Agency
           </div>
@@ -91,7 +91,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='relative h-full items-end'>
+        <div className='md:h-full items-end sm:hidden md:block'>
           {/* Video Background */}
           <video
             ref={videoRef}
@@ -99,7 +99,7 @@ const Hero = () => {
             autoPlay
             loop
             muted
-            className='absolute inset-0 w-full h-full object-cover z-0'
+            className='inset-0 w-full h-full object-cover z-0'
           />
         </div>
       </div>

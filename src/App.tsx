@@ -10,6 +10,7 @@ import Hero from './components/hero';
 import Stats from './components/stats';
 import Team from './components/team';
 import Contact from './components/contact';
+import CookieBanner from './components/CookieBanner';
 
 // --- Main App ---
 
@@ -41,6 +42,7 @@ export default function App() {
         open={contactOpen}
         onClose={() => setContactOpen(false)}
       />
+      <CookieBanner />
     </div>
   );
 }
