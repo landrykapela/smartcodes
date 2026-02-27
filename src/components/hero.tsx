@@ -1,7 +1,6 @@
 import {TypeAnimation} from 'react-type-animation';
 import {useEffect, useRef} from 'react';
 import {ArrowRight} from 'lucide-react';
-import video from '../assets/_mbuni_.mp4';
 
 const Hero = () => {
   // Video pause/play on viewport
@@ -93,13 +92,15 @@ const Hero = () => {
         </div>
 
         <div className='relative h-full items-end'>
+          {/* Video Background */}
           <video
             ref={videoRef}
-            src={video}
-             muted
-             autoPlay
-            // controls
-            loop></video>
+            src='/smartcodes/_mbuni_.mp4'
+            autoPlay
+            loop
+            muted
+            className='absolute inset-0 w-full h-full object-cover z-0'
+          />
         </div>
       </div>
     </section>
