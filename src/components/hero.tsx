@@ -1,6 +1,7 @@
 import {TypeAnimation} from 'react-type-animation';
 import {useEffect, useRef} from 'react';
-import {ArrowRight} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import mbuniVideo from '../assets/_mbuni_.mp4'
 
 const Hero = () => {
   // Video pause/play on viewport
@@ -95,7 +96,7 @@ const Hero = () => {
           {/* Video Background */}
           <video
             ref={videoRef}
-            src='/smartcodes/_mbuni_.mp4'
+            src={mbuniVideo}
             autoPlay
             loop
             muted
